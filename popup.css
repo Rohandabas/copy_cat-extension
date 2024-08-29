@@ -1,0 +1,113 @@
+/* Reset margin and padding for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper style for the extension popup */
+#wrapper {
+    width: 360px; /* Increased width for better content handling */
+    padding: 20px;
+    background: radial-gradient(circle at top left, #1e1e1e, #000000); /* Dark gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Deep shadow for depth */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    max-height: 600px; /* Increased height for more content visibility */
+}
+
+/* Card styling */
+#card {
+    background-color: #2d2d2d; /* Dark card background */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners for card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for card */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between elements */
+}
+
+/* Input field styling */
+#text {
+    width: 100%; /* Full width input */
+    padding: 12px;
+    border: 2px solid #444; /* Dark border for input */
+    border-radius: 8px; /* Rounded corners for input */
+    background-color: #1e1e1e; /* Dark background for input */
+    color: #e0e0e0; /* Light text color */
+    font-size: 16px; /* Larger text for readability */
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+#text:focus {
+    border-color: #007bff; /* Bright border color on focus */
+}
+
+/* Submit button styling */
+#btn {
+    width: 100%; /* Full width button */
+    padding: 12px;
+    border: none;
+    border-radius: 8px; /* Rounded corners for button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    font-size: 16px; /* Larger text for readability */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+}
+
+#btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Container for dynamic items */
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #333; /* Dark background for items */
+    border: 1px solid #444; /* Dark border for items */
+    border-radius: 8px; /* Rounded corners for items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Light shadow for items */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+/* Text container styling */
+.item-container > div {
+    flex-grow: 1; /* Text takes up available space */
+    margin-right: 10px; /* Space between text and buttons */
+    font-size: 16px; /* Larger text for readability */
+    color: #e0e0e0; /* Light text color */
+    word-break: break-word; /* Break long words to fit */
+}
+
+/* Button styling for dynamic items */
+.item-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px; /* Rounded corners for buttons */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    font-size: 14px; /* Slightly smaller text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and scale transition */
+    margin-left: 5px; /* Space between buttons */
+}
+
+.item-container button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Delete button styling */
+.item-container button:last-child {
+    background-color: #dc3545; /* Danger color for delete button */
+}
+
+.item-container button:last-child:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}
